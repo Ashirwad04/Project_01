@@ -1,3 +1,4 @@
+import ToDo from "./assets/ToDo";
 import Header from "./Header";
 import Login,{Profile,Settings} from "./UserComponet";
 
@@ -10,6 +11,8 @@ function App(){
     <Login/>
     <Profile/>
     <Settings/>
+    <ToDo/>
+  
    </div>
   )
 }

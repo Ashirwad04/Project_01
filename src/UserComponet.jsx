@@ -15,6 +15,8 @@ export function Profile(){
     )
 }
 
+
+//named exporrt
 export function Settings(){
     return(
         <div>
