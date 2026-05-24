@@ -4,66 +4,104 @@ import Counter from "./Components/Counter";
 import Header from "./Components/Header";
 import MultipleCondition from "./Components/MultipleCondition";
 import Login,{Profile,Settings} from "./UserComponet";
+import Props from "./Components/Props";
+import College from "./Components/College";
+import Student from "./Components/Student";
+
 
 
 
 
 function App(){
 
-  // const [display,setDisplay]=useState(false);
+
+  // let name = "John Doe";
+
+  // let userName="Ashirwad kumar";
+  // let age=25;
+  // let email="ashirwadk04@gmail.com";
+
+  let userObj={
+  name:"Ashirwad kumar",
+  age:25,
+  email:"ashirwadk04@gmail.com"
+  }
+
+  let userObj1={
+  name:"John Doe",
+  age:30,
+  email:"johndoe@gmail.com"
+  }
+
+  let userObj2={
+  name:"Jane Smith",
+  age:28,
+  email:"janesmith@gmail.com"
+  }
+
+  let userObj3={
+  name:"Aman kumar",
+  age:32,
+  email:"aman@gmail.com"
+  }
 
 
 
-  // const userObj={
-  //   name:"Aman",
-  //   age: 25,
-  //   city: "Delhi"
-  // }
+  let collegeName=["ABC College","XYZ University","PQR Institute"];
 
 
-  // const name="aman";
-  // let x=10;
-  // let y= 20;
+  const[student,setStudent]=useState("John Doe");
+
+
   return(
-  //  <div>
-  //   <Header/>
-  //   <h1>aman</h1>
-  //   <h2>karan</h2>
-  //   <Login/>
-  //   <Profile/>
-  //   <Settings/>
-  //   <ToDo/>
-  
-  //  </div>
+
   <div>
+   <h1>App</h1>
 
 
 
-    {/* <h1>Welcome to My App</h1>
-    <h1>{name}</h1>
-    <h1>{x+y}</h1>
-    <h1>{userObj.age}</h1> */}
+    <button onClick={() => setStudent("Jane Smith")}>Update Student</button>
 
 
-    {/* <button onClick={()=>setDisplay(!display)}>Toggle</button>
-    <h1>Togle in react js</h1>
-      {
-        display?<h1>Ashirwad</h1>:null
-      }
-     */}
-
-
-
-   {/* <Counter/> */}
+   <Student name={student} />
 
 
 
 
-   <h1>Working</h1>
+{/* 
+   <h2>{name}</h2>
 
-   <MultipleCondition/>
+  <Props name={userName} age={age} email={email} />
+
+
+   */}
+
+
+
+  <College names={collegeName}/>
+
+
+
+
+
+
+
+
+
+
+  <Props user={userObj} />
+  <Props user={userObj1} />
+  <Props user={userObj2} />
+  <Props user={userObj3} />
+
+
+  
   </div>
-  )
+
+ );
+
+  
+
 }
 
 export default App;
