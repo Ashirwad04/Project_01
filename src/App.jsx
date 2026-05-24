@@ -1,8 +1,17 @@
+import { useState } from "react";
 import ToDo from "./assets/ToDo";
-import Header from "./Header";
+import Counter from "./Components/Counter";
+import Header from "./Components/Header";
 import Login,{Profile,Settings} from "./UserComponet";
 
+
+
+
 function App(){
+
+  const [display,setDisplay]=useState(false);
+
+
 
   const userObj={
     name:"Aman",
@@ -26,10 +35,24 @@ function App(){
   
   //  </div>
   <div>
-    <h1>Welcome to My App</h1>
+
+
+
+    {/* <h1>Welcome to My App</h1>
     <h1>{name}</h1>
     <h1>{x+y}</h1>
-    <h1>{userObj.age}</h1>
+    <h1>{userObj.age}</h1> */}
+
+    <h1>Togle in react js</h1>
+      {
+        display?<h1>Ashirwad</h1>:null
+      }
+    
+
+    <button onClick={()=>setDisplay(!display)}>Toggle</button>
+
+
+   {/* <Counter/> */}
   </div>
   )
 }
