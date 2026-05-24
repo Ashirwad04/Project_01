@@ -2,6 +2,7 @@ import { useState } from "react";
 import ToDo from "./assets/ToDo";
 import Counter from "./Components/Counter";
 import Header from "./Components/Header";
+import MultipleCondition from "./Components/MultipleCondition";
 import Login,{Profile,Settings} from "./UserComponet";
 
 
@@ -9,20 +10,20 @@ import Login,{Profile,Settings} from "./UserComponet";
 
 function App(){
 
-  const [display,setDisplay]=useState(false);
+  // const [display,setDisplay]=useState(false);
 
 
 
-  const userObj={
-    name:"Aman",
-    age: 25,
-    city: "Delhi"
-  }
+  // const userObj={
+  //   name:"Aman",
+  //   age: 25,
+  //   city: "Delhi"
+  // }
 
 
-  const name="aman";
-  let x=10;
-  let y= 20;
+  // const name="aman";
+  // let x=10;
+  // let y= 20;
   return(
   //  <div>
   //   <Header/>
@@ -43,16 +44,24 @@ function App(){
     <h1>{x+y}</h1>
     <h1>{userObj.age}</h1> */}
 
+
+    {/* <button onClick={()=>setDisplay(!display)}>Toggle</button>
     <h1>Togle in react js</h1>
       {
         display?<h1>Ashirwad</h1>:null
       }
-    
+     */}
 
-    <button onClick={()=>setDisplay(!display)}>Toggle</button>
 
 
    {/* <Counter/> */}
+
+
+
+
+   <h1>Working</h1>
+
+   <MultipleCondition/>
   </div>
   )
 }
